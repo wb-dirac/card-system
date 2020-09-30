@@ -186,6 +186,7 @@
 <div>
 
 </div>
+<footer>Mopubi Limited © COPYRIGHT 2020-2021, All Rights Reserved</footer>
 <script type=text/javascript>var config = @json($config);</script>
 <script type=text/javascript src="/shop_theme/classic/common.js?v={!! $version !!}"></script>
 <script type=text/javascript src="/shop_theme/classic/pc.min.js?v={!! $version !!}"></script>
