@@ -2,7 +2,7 @@
 if (!isset($result)) {
     $result = [
         'success' => false,
-        'msg' => '未知错误, 渲染失败'
+        'msg' => '未知錯誤, 渲染失敗'
     ];
 }
 if (!isset($result['success'])) {
@@ -38,13 +38,13 @@ if (!isset($result['success'])) {
     <title>支付结果</title>
 </head>
 <body id="page">
-<h3>{{ isset($result['title']) ? $result['title'] : ($result['success'] ? '订单已支付' : '支付失败！' ) }}</h3>
+<h3>{{ isset($result['title']) ? $result['title'] : ($result['success'] ? '訂單已支付' : '支付失敗！' ) }}</h3>
 <div>
     <p class="status-msg">{!! $result['msg'] !!}</p>
     @if(isset($card_txt))
         <div>
             <textarea id="card-txt" class="card-txt" title="卡密列表" rows="6" readonly>{{ $card_txt }}</textarea>
-            <a id="card-copy" href="#" data-clipboard-target="#card-txt">一键复制</a>
+            <a id="card-copy" href="#" data-clipboard-target="#card-txt">壹鍵復制</a>
             <script type="text/javascript">
                 new ClipboardJS('#card-copy');
             </script>
@@ -52,7 +52,7 @@ if (!isset($result['success'])) {
     @endif
     <br/>
     @if(isset($product))
-        <!-- render instructions -->
+    <!-- render instructions -->
         <div class="ql-snow">
             <div class="ql-editor quill-html" id="instructions"></div>
         </div>
@@ -62,7 +62,7 @@ if (!isset($result['success'])) {
             document.getElementById('instructions').innerHTML = renderDescription({!! $product['instructions'] !!});
         </script>
     @endif
-    <a style="float:right" href="javascript:window.close()">关闭</a>
+    <a style="float:right" href="javascript:window.close()">關閉</a>
     <br/>
 </div>
 </body>
